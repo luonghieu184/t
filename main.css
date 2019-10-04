@@ -1,0 +1,241 @@
+:root{
+  --blue: #0176c0;
+}
+*, body {
+  margin: 0 auto;
+  font-family: "Open Sans",Helvetica, Arial, sans-serif;
+}
+h1,h2,h3,h4,h5{font-weight: normal; font-size: 16px}
+p, li, a, input, label{font-size: 13px}
+ul {
+  padding: 0
+}
+ul li{
+text-transform: uppercase;
+}
+#main-wrapper {
+  padding: 20px;
+  max-width: 1024px;
+
+}
+
+.wrapper-header .logo {
+  width: 16.5%;
+  height: 42px;
+  background-image: url(./images/logo.png);
+  background-size: cover;
+}
+
+.wrapper-header .logo img {
+  width: 170px
+}
+
+.wrapper-header .logo, .menu {
+  float: left
+}
+
+.wrapper-header .menu ul {
+  margin-left: 10px
+}
+
+.wrapper-header .menu ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+.wrapper-header .menu ul li:nth-child(2)>a:hover {
+    background-color: #d0e4f280;
+    transition: all 0.5s 10ms;
+}
+li.nav-links a,.ope-log,input.login {
+    padding: 10px 26px;
+    background-color: var(--blue);
+    border: 2px solid var(--blue)
+}
+li.nav-links.ope-log {
+    color: white;
+}
+li.nav-links.login.ope-log:hover {
+    background-color: white;
+    border: 2px solid var(--blue);
+    color: black;
+    transition: all 0.5s 10ms;
+    cursor: pointer
+}
+li.nav-links:nth-child(2){
+  margin-left: -5px;
+}
+.wrapper-header .menu ul li:nth-child(2)>a{
+  color: #000;
+  background-color: #fff;
+
+}
+
+.wrapper-header .menu {
+  width: 80%;
+  margin-left: 3.5%
+}
+
+.wrapper-header .menu ul li.login {
+  float: right
+}
+
+.wrapper-header .menu ul li a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff
+}
+
+.clearfix {
+  clear: both
+}
+
+/* Popup login form */
+.overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0
+}
+
+
+.popup-login{
+  margin: 100px auto 0;
+  padding: 20px;
+  background:  #fff;
+  border-radius: 5px;
+  min-width: 270px;
+  width: 500px;
+  position: relative;
+  transition: all 1s ease-in-out
+}
+.popup-login h2 {
+  font-size: 21px;
+  user-select: none;
+  text-transform: uppercase;
+  margin: 39px 0 20px 0;
+  text-align: center;
+}
+.popup-login >a {
+  margin-top: 10px;
+}
+
+.popup-login .close{
+  margin: 16px 5px;
+  position: absolute;
+  top: -13px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 29px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+.popup-login .close:hover {
+  color: #06D85F;
+}
+.popup-login .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.fieldset-form{
+  padding: 40px 0;
+  border: none;
+}
+
+
+/* form - input form - form-contr */
+.input-group{
+  position: relative;
+  margin-bottom: 32px;
+}
+.input-group input.form-control{
+  font-size: 16px;
+  padding: 9px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgrey
+}
+.input-group input.form-control:focus{
+  outline: none
+}
+.input-group label{
+  pointer-events: none;
+  color: lightgrey;
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+/* active state input focus */
+input.form-control:focus ~ label, input.form-control:valid ~ label 		{
+  transition: all 0.25s 200ms;
+  top:-20px;
+  font-size:14px;
+  color: var(--blue);
+}
+/* BOTTOM BARS-BORDER ================================= */
+.bar-transition 	{ position:relative; display:block; width:50%; }
+.bar-transition:before, .bar-transition:after 	{
+  content:'';
+  height:1px;
+  width:0;
+  bottom:0.5px;
+  position:absolute;
+  background:var(--blue);
+  transition:all 0.4s 200ms;
+  -moz-transition:all 0.4s 200ms;
+  -webkit-transition:all 0.4s 200ms
+}
+.input-group .bar-transition::after{
+  right: 50%;
+}
+.input-group .bar-transition::before{
+  left: 50%;
+}
+/* Active state hightlight and transition */
+input.form-control:focus ~ .bar-transition:before, input.form-control:focus ~ .bar-transition:after {
+  width:100%;
+}
+
+input:-webkit-autofill,select:-webkit-autofill {
+    background-color: #ffffff00  !important;
+    color: rgb(0, 0, 0) !important;
+}
+input.login{
+  margin-top: 20px;
+  border: 2px solid var(--blue);
+  color: white;
+  display: block;
+  width: 135px;
+}
+
+input.login:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: all 0.25s 20ms;
+}
+
+/* dashboard article*/
+
+#app-main{
+  padding: 16px;
+    min-height: 500px;
+    border: 1px solid;
+    margin-top: 72px;
+}
+#app-main .success {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid;
+    box-shadow: 1px 2px 1px lightgrey;
+    min-height: 181px;
+}
+.hidden{
+  display: none;
+}

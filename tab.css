@@ -1,0 +1,49 @@
+
+.ih.columns ul.tab-login {
+    list-style: none;
+    text-align: center;
+    border-left: 2px solid #0176c0;
+    height: 43.85px;
+    /* height: 44.09px; */
+}
+
+.ih.columns ul.tab-login li {
+    display: inline;
+}
+/* .ih.columns ul.tab-login li:nth-child(1){margin-left: 5px} */
+
+.ih.columns ul.tab-login li:first-child{margin-left: 8px}
+.ih.columns ul.tab-login li:nth-child(2){margin-left: -3px}
+.ih.columns ul.tab-login li a.button {
+    background-color: white;
+    margin-bottom: -1px;
+    min-width: 130px;
+    width: 49%;
+}
+
+.ih.columns ul.tab-login li a.active.button {
+  color: white;
+  background-color: #0176c0;
+}
+
+.ih.columns .tab-content-login .tab-access-login {
+    display: none;
+}
+
+.ih.columns .tab-content-login .tab-access-login.active {
+    display: block;
+}
+
+.button {
+  display: inline-block;
+      padding: 1.05px 30px;
+      color: black;
+      text-align: center;
+      font-size: 13px;
+      line-height: 38px;
+      text-decoration: none;
+      background-color: #0176c0;
+      border: 2px solid #0176c0;
+      cursor: pointer;
+      box-sizing: border-box;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ITHUTECH - CỔNG QUẢN LÍ THỰC TẬP SINH VIÊN</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./tab.css">
+  <link rel="stylesheet" href="./responsive.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+  <script src="./js/popup.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<body id="main-load">
+  <main id="main-wrapper">
+    <!-- Header menu -->
+    <header class="wrapper-header">
+      <div class="logo"></div>
+      <nav class="menu">
+        <ul>
+          <li class="nav-links"><a href="#">Trang Chủ</a></li>
+          <li class="nav-links"><a href="#">Hỏi Đáp</a></li>
+          <li class="nav-links login ope-log"><span id="profile">Đăng Nhập</span></li>
+        </ul>
+      </nav>
+      <div id="login" class="overlay clearfix">
+        <!-- Header login form ithutech -->
+        <div class="popup-login">
+          <h2>thông tin đăng nhập</h2>
+          <a href="#" class="close">&times;</a>
+          <div class="ih columns">
+            <ul class="tab-login">
+              <li>
+                <a class="button active" href="#tab-student">Sinh viên</a>
+              </li>
+              <li>
+                <a class="button" href="#tab-lecturers">Giảng viên</a>
+              </li>
+            </ul>
+            <div class="tab-content-login">
+              <div class="tab-access-login active" id="tab-student">
+                <div class="form-box">
+                  <form name="login-form">
+                    <fieldset class="fieldset-form">
+                      <div class="input-group">
+                        <input id="user-student" type="text" class="form-control"  value="" required>
+                        <span class="highlight"></span>
+                        <span class="bar-transition"></span>
+                        <label>Nhập Mã Số Sinh Viên</label>
+                      </div>
+                      <div class="input-group">
+                        <input id="pass-student" type="password" class="form-control" value="" required>
+                        <span class="highlight"></span>
+                        <span class="bar-transition"></span>
+                        <label>Nhập Mật khẩu</label>
+                      </div>
+                      <input id="login-student" type="submit" class="login" value="ĐĂNG NHẬP">
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+              <div class="tab-access-login" id="tab-lecturers">
+                <div class="form-box">
+                  <form name="login-form">
+                    <fieldset class="fieldset-form">
+                    <div class="input-group">
+                      <input id="user-lecturers" type="text" class="form-control" value="" required>
+                      <span class="highlight"></span>
+                      <span class="bar-transition"></span>
+                      <label>Nhập Email</label>
+                    </div>
+                    <div class="input-group">
+                      <input id="pass-lecturers" type="password" class="form-control" value="" required>
+                      <span class="highlight"></span>
+                      <span class="bar-transition"></span>
+                      <label>Nhập Mật khẩu</label>
+                    </div>
+                    <input id="login-lecturers" type="submit" class="login" value="ĐĂNG NHẬP">
+                  </form>
+                </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="app-main" class="clearfix">
+
+      <h2 style="text-align:center">Phiên Dành Cho Sinh Viên</h2>
+      <div class="success"></div>
+    <!-- slidebar - update notification, new, update version,.... -->
+    <aside class="bar-info clearfix hidden">
+      <div class="info-no left-f">
+        <div class="info-no-title u">
+          <span>thông báo</span>
+        </div>
+        <div class="info-no-details">
+          <h2 class="title-no-news">tra cứu thông tin giảng viên hướng dẫn</h2>
+          <p class="text">Sinh viên sử dụng hệ thống truy cấp tài khoản và tiếng hành thay đổi mật khẩu cá nhân. Yêu cầu ban cán sự lớp thông báo tất cả sinh viên thực hiện nghiên túc</p>
+          <a href="#" class="read-more"></a>
+        </div>
+      </div>
+      <div class="info-no left-f new-update ">
+        <div class="info-no-title u">
+          <span>tin tức - cập nhật</span>
+        </div>
+        <div class="info-no-details">
+          <h2 class="title-no-news">tra cứu thông tin giảng viên hướng dẫn</h2>
+          <p class="text">Sinh viên sử dụng hệ thống truy cấp tài khoản và tiếng hành thay đổi mật khẩu cá nhân. Yêu cầu ban cán sự lớp thông báo tất cả sinh viên thực hiện nghiên túc</p>
+          <a href="#" class="read-more"></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- section introduction web manager system ithutech -->
+    <article class="introduc hidden">
+      <h2 class="title-introduc">giới thiệu cổng quản lí đồ án</h2>
+      <p class="text justify-text">Quản lý giảng dạy là một nhu cầu quan trọng của các trường đại học nhất là các trường có khối lượng giảng viên và sinh viên lớn. Nhu cầu cần quản lý được cán bộ, các lớp học cùng những thông tin liên quan đến quá
+        trình học tập của sinh viên và thông tin giảng dạy của giảng viên là rất quan trọng.<br />
+        Công tác quản lý giảng dạy đòi hỏi những kinh nghiệm quản lý như: quản lý hồ sơ cán bộ, lên kế hoạch giảng dạy, phân công giảng dạy, phân công hướng dẫn thực tập, phân công hướng dẫn đồ án môn học, hướng dẫn phản biện đồ án tốt nghiệp và
+        thống kê khối lượng giảng dạy cho các giảng viên,quản lý về đồ án tốt nghiệp của sinh viên</p>
+    </article>
+
+    <!-- section indution technoly extension, etc,.... -->
+    <article class="product-review hidden">
+      <div class="img-cover">
+      </div>
+      <div class="widget">
+        <div class="widget-top">
+          <div class="widget-content">
+            <h3>Sự đổi mới</h3>
+            <p>Công nghệ kĩ thuật số <br>Tiếp kiệm thời gian</p>
+          </div>
+          <div class="widget-content">
+            <h3>Sự đổi mới</h3>
+            <p>Công nghệ kĩ thuật số <br>Tiếp kiệm thời gian</p>
+          </div>
+        </div>
+        <div class="widget-bottom">
+          <div class="widget-content">
+            <h3>Sự đổi mới</h3>
+            <p>Công nghệ kĩ thuật số <br>Tiếp kiệm thời gian</p>
+          </div>
+          <div class="widget-content">
+            <h3>Sự đổi mới</h3>
+            <p>Công nghệ kĩ thuật số <br>Tiếp kiệm thời gian</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- article login sucess -->
+
+
+    </section>
+  </main>
+  <script src="./js/main.js" type="text/javascript"></script>
+  <script src="./js/ecodinId72h.js" type="text/javascript"></script>
+  <script src="./js/cooEsULmDDphHMkie.js" type="text/javascript"></script>
+  <script src="./js/popup.js" type="text/javascript"></script>
+  <script src="./js/ecodinId24iaUO.js" type="text/javascript"></script>
+
+</body>
+</html>
