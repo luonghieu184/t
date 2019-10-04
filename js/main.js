@@ -13,7 +13,7 @@ $("#login-student").click(function(event) {
      var strText = "";
      $.getJSON(url, function( data ) {
  		         $.each(data, function( key, val ) {
-             strText += val.overview;
+             strText += val[0].["overview"];
          });
          $("#app-main").html(strText);
      });
@@ -29,7 +29,7 @@ $("#login-lecturers").click(function(event) {
      var strText = "";
      $.getJSON(url, function( data ) {
  		         $.each(data, function( key, val ) {
-             strText += val.overview;
+             strText += val[0].["overview"];
          });
          $("#app-main").html(strText);
      });
